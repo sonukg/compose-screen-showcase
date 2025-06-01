@@ -7,27 +7,43 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Kotlin", "Java", "Dart", "Python", "JavaScript"]
+      skills: ["Kotlin", "Java", "Dart", "Swift", "Python", "JavaScript", "TypeScript", "C++"]
     },
     {
       title: "Android Development",
-      skills: ["Jetpack Compose", "XML Layouts", "Material Design", "Android SDK", "Gradle"]
+      skills: ["Jetpack Compose", "XML Layouts", "Material Design", "Android SDK", "Gradle", "Activities & Fragments", "Services", "Broadcast Receivers", "Content Providers", "Notifications", "Camera API", "Location Services", "Permissions", "Data Binding", "View Binding", "Navigation Component", "Work Manager", "App Widgets", "Custom Views", "Animation"]
     },
     {
       title: "Architecture & Patterns",
-      skills: ["MVVM", "MVP", "Clean Architecture", "Repository Pattern", "Dependency Injection"]
+      skills: ["MVVM", "MVP", "MVI", "Clean Architecture", "Repository Pattern", "Dependency Injection", "SOLID Principles", "Observer Pattern", "Singleton Pattern", "Factory Pattern"]
     },
     {
       title: "Libraries & Frameworks",
-      skills: ["Retrofit", "Room", "Dagger/Hilt", "RxJava", "Coroutines", "Glide"]
+      skills: ["Retrofit", "Room", "Dagger/Hilt", "RxJava", "Coroutines", "Glide", "Picasso", "OkHttp", "Gson", "Moshi", "Timber", "LeakCanary", "Stetho", "Lottie", "ExoPlayer", "CameraX"]
+    },
+    {
+      title: "KMP/CMP (Kotlin Multiplatform)",
+      skills: ["Kotlin Multiplatform Mobile", "Compose Multiplatform", "Shared Business Logic", "Platform-Specific APIs", "Ktor Client", "SQLDelight", "Multiplatform Resources", "Expect/Actual Declarations", "Native Interop", "CocoaPods Integration", "Gradle Multiplatform Plugin"]
+    },
+    {
+      title: "Flutter Development",
+      skills: ["Flutter SDK", "Dart Language", "Widgets", "State Management (Bloc, Provider, Riverpod)", "Flutter Navigation", "Animations", "Custom Paintings", "Platform Channels", "Flutter Web", "Flutter Desktop", "Pub.dev Packages", "Firebase Flutter", "Dio HTTP Client", "Hive Database", "GetX"]
+    },
+    {
+      title: "iOS Development",
+      skills: ["Swift", "Objective-C", "UIKit", "SwiftUI", "Core Data", "Core Animation", "Auto Layout", "Storyboards", "XIBs", "URLSession", "Grand Central Dispatch", "Core Location", "Push Notifications", "App Store Connect", "Xcode", "CocoaPods", "Swift Package Manager"]
     },
     {
       title: "Tools & Platforms",
-      skills: ["Android Studio", "Git", "Firebase", "Google Play Console", "CI/CD"]
+      skills: ["Android Studio", "Xcode", "VS Code", "IntelliJ IDEA", "Git", "Firebase", "Google Play Console", "App Store Connect", "CI/CD", "Fastlane", "Bitrise", "GitHub Actions", "Jenkins"]
     },
     {
       title: "Testing",
-      skills: ["JUnit", "Espresso", "Mockito", "UI Testing", "Unit Testing"]
+      skills: ["JUnit", "Espresso", "Mockito", "Robolectric", "UI Testing", "Unit Testing", "Integration Testing", "Test-Driven Development", "Behaviour-Driven Development", "XCTest", "Flutter Test"]
+    },
+    {
+      title: "Backend & Cloud",
+      skills: ["Firebase", "AWS", "Google Cloud", "REST APIs", "GraphQL", "WebSockets", "Node.js", "Express.js", "MongoDB", "PostgreSQL", "Redis", "Docker"]
     }
   ];
 
@@ -37,7 +53,7 @@ const SkillsSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Skills & Technologies</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A comprehensive toolkit for building exceptional Android applications
+            Comprehensive expertise across mobile platforms and technologies
           </p>
         </div>
 
