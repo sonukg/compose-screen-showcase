@@ -1,35 +1,25 @@
 
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import ProfileScreen from '@/components/ProfileScreen';
-import StatisticsScreen from '@/components/StatisticsScreen';
+import React from 'react';
+import HeroSection from '@/components/portfolio/HeroSection';
+import AboutSection from '@/components/portfolio/AboutSection';
+import SkillsSection from '@/components/portfolio/SkillsSection';
+import ProjectsSection from '@/components/portfolio/ProjectsSection';
+import ExperienceSection from '@/components/portfolio/ExperienceSection';
+import ContactSection from '@/components/portfolio/ContactSection';
+import Navigation from '@/components/portfolio/Navigation';
 
 const Index = () => {
-  const [currentScreen, setCurrentScreen] = useState('profile');
-
   return (
-    <div className="min-h-screen">
-      {/* Navigation */}
-      <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-10 bg-white rounded-full shadow-lg p-2 flex space-x-2">
-        <Button
-          variant={currentScreen === 'profile' ? 'default' : 'ghost'}
-          className={currentScreen === 'profile' ? 'bg-teal-500 hover:bg-teal-600' : ''}
-          onClick={() => setCurrentScreen('profile')}
-        >
-          Profile
-        </Button>
-        <Button
-          variant={currentScreen === 'statistics' ? 'default' : 'ghost'}
-          className={currentScreen === 'statistics' ? 'bg-teal-500 hover:bg-teal-600' : ''}
-          onClick={() => setCurrentScreen('statistics')}
-        >
-          Statistics
-        </Button>
-      </div>
-
-      {/* Screen Content */}
-      {currentScreen === 'profile' && <ProfileScreen />}
-      {currentScreen === 'statistics' && <StatisticsScreen />}
+    <div className="min-h-screen bg-gray-50">
+      <Navigation />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ExperienceSection />
+        <ContactSection />
+      </main>
     </div>
   );
 };
