@@ -34,9 +34,23 @@ const ExperienceSection = () => {
       technologies: ["Kotlin", "MVVM", "Room", "Retrofit", "RxJava"]
     },
     {
+      title: "Mobile App Developer",
+      company: "InnovateTech Solutions",
+      period: "2017 - 2020",
+      location: "Seattle, WA",
+      description: "Full-stack mobile developer working on both Android and cross-platform solutions. Specialized in healthcare and fintech applications with strict security requirements.",
+      achievements: [
+        "Developed HIPAA-compliant healthcare apps serving 200K+ patients",
+        "Implemented advanced security features including biometric authentication",
+        "Led cross-platform development initiatives using React Native",
+        "Achieved 99.9% uptime for critical financial applications"
+      ],
+      technologies: ["Kotlin", "Java", "React Native", "Security", "FHIR", "Encryption"]
+    },
+    {
       title: "Junior Android Developer",
       company: "Mobile Solutions Ltd.",
-      period: "2018 - 2020",
+      period: "2016 - 2017",
       location: "Austin, TX",
       description: "Developed and maintained Android applications for various clients. Gained experience in different industries and app types.",
       achievements: [

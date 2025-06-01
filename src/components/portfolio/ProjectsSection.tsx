@@ -30,6 +30,86 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "Coroutines", "Biometric Auth", "Room", "Clean Architecture"],
       downloads: "25K+ downloads",
       features: ["Multi-currency support", "Biometric security", "Price alerts", "Portfolio analytics"]
+    },
+    {
+      title: "TaskMaster",
+      description: "Advanced task management app with team collaboration, time tracking, and productivity insights.",
+      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
+      technologies: ["Kotlin", "Clean Architecture", "Dagger", "Room", "WorkManager"],
+      downloads: "75K+ downloads",
+      features: ["Team collaboration", "Time tracking", "Gantt charts", "Push notifications"]
+    },
+    {
+      title: "FoodieFind",
+      description: "Restaurant discovery app with AR menu overlay, reviews, and reservation booking system.",
+      image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=300&fit=crop",
+      technologies: ["Kotlin", "ARCore", "Google Maps", "Retrofit", "CameraX"],
+      downloads: "40K+ downloads",
+      features: ["AR menu scanner", "Table reservations", "Review system", "Location-based search"]
+    },
+    {
+      title: "MediTrack",
+      description: "Health monitoring app with medication reminders, symptom tracking, and doctor consultations.",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=500&h=300&fit=crop",
+      technologies: ["Kotlin", "Health Connect", "ML Kit", "Firebase", "HealthKit"],
+      downloads: "60K+ downloads",
+      features: ["Medication reminders", "Symptom logging", "Health reports", "Telemedicine integration"]
+    },
+    {
+      title: "TravelGuide",
+      description: "Smart travel companion with offline maps, itinerary planning, and local recommendations.",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop",
+      technologies: ["Kotlin", "Mapbox", "Room", "WorkManager", "Location Services"],
+      downloads: "90K+ downloads",
+      features: ["Offline maps", "Smart itineraries", "Local insights", "Expense tracking"]
+    },
+    {
+      title: "StudyBuddy",
+      description: "Educational app with flashcards, spaced repetition learning, and study group features.",
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=500&h=300&fit=crop",
+      technologies: ["Kotlin", "Room", "Machine Learning", "Speech Recognition", "Material You"],
+      downloads: "35K+ downloads",
+      features: ["Spaced repetition", "Voice notes", "Study groups", "Progress tracking"]
+    },
+    {
+      title: "SmartHome",
+      description: "IoT home automation app controlling lights, temperature, security, and energy consumption.",
+      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=500&h=300&fit=crop",
+      technologies: ["Kotlin", "MQTT", "Bluetooth LE", "WiFi Direct", "Custom Views"],
+      downloads: "20K+ downloads",
+      features: ["Device control", "Energy monitoring", "Security alerts", "Voice commands"]
+    },
+    {
+      title: "PhotoVault",
+      description: "Secure photo storage app with AI tagging, facial recognition, and encrypted cloud backup.",
+      image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&h=300&fit=crop",
+      technologies: ["Kotlin", "ML Kit", "Encryption", "Cloud Storage", "CameraX"],
+      downloads: "45K+ downloads",
+      features: ["AI photo tagging", "Facial recognition", "Encrypted storage", "Smart albums"]
+    },
+    {
+      title: "BudgetWise",
+      description: "Personal finance app with expense tracking, budget planning, and investment portfolio management.",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop",
+      technologies: ["Kotlin", "Chart Libraries", "Bank APIs", "Room", "Security"],
+      downloads: "80K+ downloads",
+      features: ["Expense categorization", "Budget alerts", "Investment tracking", "Financial insights"]
+    },
+    {
+      title: "WeatherPro",
+      description: "Advanced weather app with hourly forecasts, weather maps, and severe weather alerts.",
+      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop",
+      technologies: ["Kotlin", "Weather APIs", "MapView", "Push Notifications", "Widget"],
+      downloads: "150K+ downloads",
+      features: ["Radar maps", "Severe alerts", "Hourly forecasts", "Widget support"]
+    },
+    {
+      title: "CodeSnippet",
+      description: "Developer tool for code snippet management with syntax highlighting and team sharing.",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=300&fit=crop",
+      technologies: ["Kotlin", "Syntax Highlighting", "GitHub API", "Room", "Search"],
+      downloads: "15K+ downloads",
+      features: ["Syntax highlighting", "Code search", "Team sharing", "Version control"]
     }
   ];
 
