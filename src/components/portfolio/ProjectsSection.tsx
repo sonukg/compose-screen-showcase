@@ -4,9 +4,34 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Github, Smartphone, Globe, Apple } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  downloads: string;
+  features: string[];
+  category: string;
+  links: {
+    playstore: string | null;
+    appstore: string | null;
+    webapp: string;
+  };
+  overview?: string;
+  developmentProcess?: string;
+  challengesAndSolutions?: string;
+  duration?: {
+    start: string;
+    end: string;
+  };
+}
 
 const ProjectsSection = () => {
-  const projects = [
+  const navigate = useNavigate();
+
+  const projects: Project[] = [
     {
       title: "FitTracker Pro",
       description: "A comprehensive fitness tracking app with workout planning, progress tracking, and social features. Built with Jetpack Compose and Firebase.",
@@ -19,6 +44,13 @@ const ProjectsSection = () => {
         playstore: "https://play.google.com/store/apps/details?id=com.fittracker.pro",
         appstore: "https://apps.apple.com/app/fittracker-pro/id123456789",
         webapp: "https://fittracker-pro.com"
+      },
+      overview: "FitTracker Pro is a comprehensive fitness application designed to help users maintain their fitness goals through advanced tracking and social engagement features.",
+      developmentProcess: "Developed using modern Android architecture with Jetpack Compose for UI, Room for local data storage, and Firebase for cloud synchronization and real-time features.",
+      challengesAndSolutions: "Main challenge was implementing real-time synchronization across multiple devices. Solved by implementing a robust offline-first architecture with conflict resolution.",
+      duration: {
+        start: "Jan 2023",
+        end: "Jun 2023"
       }
     },
     {
@@ -33,6 +65,13 @@ const ProjectsSection = () => {
         playstore: "https://play.google.com/store/apps/details?id=com.ecoshop",
         appstore: "https://apps.apple.com/app/ecoshop/id123456790",
         webapp: "https://ecoshop.com"
+      },
+      overview: "EcoShop promotes sustainable shopping by providing users with detailed environmental impact data for products and stores.",
+      developmentProcess: "Built with MVVM architecture, utilizing Retrofit for API calls and implementing a comprehensive rating system for product sustainability.",
+      challengesAndSolutions: "Challenge was aggregating sustainability data from multiple sources. Created a unified scoring algorithm that combines various environmental metrics.",
+      duration: {
+        start: "Aug 2022",
+        end: "Dec 2022"
       }
     },
     {
@@ -45,151 +84,17 @@ const ProjectsSection = () => {
       category: "Android",
       links: {
         playstore: "https://play.google.com/store/apps/details?id=com.cryptowallet",
-        appstore: "https://apps.apple.com/app/cryptowallet/id123456791",
+        appstore: null,
         webapp: "https://cryptowallet.com"
+      },
+      overview: "Secure cryptocurrency wallet focusing on user security and portfolio management with real-time market data integration.",
+      developmentProcess: "Implemented with Clean Architecture principles, emphasizing security through biometric authentication and encrypted local storage.",
+      challengesAndSolutions: "Security was paramount. Implemented multi-layer encryption and secure key management using Android Keystore system.",
+      duration: {
+        start: "Mar 2023",
+        end: "Aug 2023"
       }
     },
-    {
-      title: "TaskMaster",
-      description: "Advanced task management app with team collaboration, time tracking, and productivity insights.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-      technologies: ["Kotlin", "Clean Architecture", "Dagger", "Room", "WorkManager"],
-      downloads: "75K+ downloads",
-      features: ["Team collaboration", "Time tracking", "Gantt charts", "Push notifications"],
-      category: "Android",
-      links: {
-        playstore: "https://play.google.com/store/apps/details?id=com.taskmaster",
-        appstore: "https://apps.apple.com/app/taskmaster/id123456792",
-        webapp: "https://taskmaster.com"
-      }
-    },
-    {
-      title: "FoodieFind",
-      description: "Restaurant discovery app with AR menu overlay, reviews, and reservation booking system.",
-      image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=300&fit=crop",
-      technologies: ["Kotlin", "ARCore", "Google Maps", "Retrofit", "CameraX"],
-      downloads: "40K+ downloads",
-      features: ["AR menu scanner", "Table reservations", "Review system", "Location-based search"],
-      category: "Android",
-      links: {
-        playstore: "https://play.google.com/store/apps/details?id=com.foodiefind",
-        appstore: "https://apps.apple.com/app/foodiefind/id123456793",
-        webapp: "https://foodiefind.com"
-      }
-    },
-    {
-      title: "MediTrack",
-      description: "Health monitoring app with medication reminders, symptom tracking, and doctor consultations.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=500&h=300&fit=crop",
-      technologies: ["Kotlin", "Health Connect", "ML Kit", "Firebase", "HealthKit"],
-      downloads: "60K+ downloads",
-      features: ["Medication reminders", "Symptom logging", "Health reports", "Telemedicine integration"],
-      category: "Android",
-      links: {
-        playstore: "https://play.google.com/store/apps/details?id=com.meditrack",
-        appstore: "https://apps.apple.com/app/meditrack/id123456794",
-        webapp: "https://meditrack.com"
-      }
-    },
-    {
-      title: "TravelGuide",
-      description: "Smart travel companion with offline maps, itinerary planning, and local recommendations.",
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop",
-      technologies: ["Kotlin", "Mapbox", "Room", "WorkManager", "Location Services"],
-      downloads: "90K+ downloads",
-      features: ["Offline maps", "Smart itineraries", "Local insights", "Expense tracking"],
-      category: "Android",
-      links: {
-        playstore: "https://play.google.com/store/apps/details?id=com.travelguide",
-        appstore: "https://apps.apple.com/app/travelguide/id123456795",
-        webapp: "https://travelguide.com"
-      }
-    },
-    {
-      title: "StudyBuddy",
-      description: "Educational app with flashcards, spaced repetition learning, and study group features.",
-      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=500&h=300&fit=crop",
-      technologies: ["Kotlin", "Room", "Machine Learning", "Speech Recognition", "Material You"],
-      downloads: "35K+ downloads",
-      features: ["Spaced repetition", "Voice notes", "Study groups", "Progress tracking"],
-      category: "Android",
-      links: {
-        playstore: "https://play.google.com/store/apps/details?id=com.studybuddy",
-        appstore: "https://apps.apple.com/app/studybuddy/id123456796",
-        webapp: "https://studybuddy.com"
-      }
-    },
-    {
-      title: "SmartHome",
-      description: "IoT home automation app controlling lights, temperature, security, and energy consumption.",
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=500&h=300&fit=crop",
-      technologies: ["Kotlin", "MQTT", "Bluetooth LE", "WiFi Direct", "Custom Views"],
-      downloads: "20K+ downloads",
-      features: ["Device control", "Energy monitoring", "Security alerts", "Voice commands"],
-      category: "Android",
-      links: {
-        playstore: "https://play.google.com/store/apps/details?id=com.smarthome",
-        appstore: "https://apps.apple.com/app/smarthome/id123456797",
-        webapp: "https://smarthome.com"
-      }
-    },
-    {
-      title: "PhotoVault",
-      description: "Secure photo storage app with AI tagging, facial recognition, and encrypted cloud backup.",
-      image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&h=300&fit=crop",
-      technologies: ["Kotlin", "ML Kit", "Encryption", "Cloud Storage", "CameraX"],
-      downloads: "45K+ downloads",
-      features: ["AI photo tagging", "Facial recognition", "Encrypted storage", "Smart albums"],
-      category: "Android",
-      links: {
-        playstore: "https://play.google.com/store/apps/details?id=com.photovault",
-        appstore: "https://apps.apple.com/app/photovault/id123456798",
-        webapp: "https://photovault.com"
-      }
-    },
-    {
-      title: "BudgetWise",
-      description: "Personal finance app with expense tracking, budget planning, and investment portfolio management.",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop",
-      technologies: ["Kotlin", "Chart Libraries", "Bank APIs", "Room", "Security"],
-      downloads: "80K+ downloads",
-      features: ["Expense categorization", "Budget alerts", "Investment tracking", "Financial insights"],
-      category: "Android",
-      links: {
-        playstore: "https://play.google.com/store/apps/details?id=com.budgetwise",
-        appstore: "https://apps.apple.com/app/budgetwise/id123456799",
-        webapp: "https://budgetwise.com"
-      }
-    },
-    {
-      title: "WeatherPro",
-      description: "Advanced weather app with hourly forecasts, weather maps, and severe weather alerts.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop",
-      technologies: ["Kotlin", "Weather APIs", "MapView", "Push Notifications", "Widget"],
-      downloads: "150K+ downloads",
-      features: ["Radar maps", "Severe alerts", "Hourly forecasts", "Widget support"],
-      category: "Android",
-      links: {
-        playstore: "https://play.google.com/store/apps/details?id=com.weatherpro",
-        appstore: "https://apps.apple.com/app/weatherpro/id123456800",
-        webapp: "https://weatherpro.com"
-      }
-    },
-    {
-      title: "CodeSnippet",
-      description: "Developer tool for code snippet management with syntax highlighting and team sharing.",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=300&fit=crop",
-      technologies: ["Kotlin", "Syntax Highlighting", "GitHub API", "Room", "Search"],
-      downloads: "15K+ downloads",
-      features: ["Syntax highlighting", "Code search", "Team sharing", "Version control"],
-      category: "Android",
-      links: {
-        playstore: "https://play.google.com/store/apps/details?id=com.codesnippet",
-        appstore: "https://apps.apple.com/app/codesnippet/id123456801",
-        webapp: "https://codesnippet.com"
-      }
-    },
-    // iOS Projects
     {
       title: "HealthTracker iOS",
       description: "Comprehensive health monitoring app with HealthKit integration and Apple Watch support.",
@@ -202,37 +107,15 @@ const ProjectsSection = () => {
         playstore: null,
         appstore: "https://apps.apple.com/app/healthtracker-ios/id123456802",
         webapp: "https://healthtracker-ios.com"
+      },
+      overview: "Native iOS health tracking application that seamlessly integrates with Apple's health ecosystem.",
+      developmentProcess: "Developed using SwiftUI with deep HealthKit integration and Apple Watch companion app for continuous monitoring.",
+      challengesAndSolutions: "Ensuring data privacy compliance while providing comprehensive health insights. Implemented on-device processing for sensitive health data.",
+      duration: {
+        start: "Sep 2022",
+        end: "Feb 2023"
       }
     },
-    {
-      title: "ShopSmart iOS",
-      description: "Smart shopping assistant with AR product scanning and price comparison.",
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&h=300&fit=crop",
-      technologies: ["Swift", "ARKit", "Vision", "Core ML", "StoreKit"],
-      downloads: "85K+ downloads",
-      features: ["AR scanning", "Price comparison", "Barcode reader", "Wishlist sync"],
-      category: "iOS",
-      links: {
-        playstore: null,
-        appstore: "https://apps.apple.com/app/shopsmart-ios/id123456803",
-        webapp: "https://shopsmart-ios.com"
-      }
-    },
-    {
-      title: "MindfulMoments",
-      description: "Meditation and mindfulness app with guided sessions and progress tracking.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop",
-      technologies: ["Swift", "AVFoundation", "CloudKit", "WidgetKit", "SiriKit"],
-      downloads: "200K+ downloads",
-      features: ["Guided meditation", "Siri shortcuts", "Widgets", "Cloud sync"],
-      category: "iOS",
-      links: {
-        playstore: null,
-        appstore: "https://apps.apple.com/app/mindfulmoments/id123456804",
-        webapp: "https://mindfulmoments.com"
-      }
-    },
-    // KMP/CMP Projects
     {
       title: "CrossPlatform Banking",
       description: "Secure banking app built with Kotlin Multiplatform sharing business logic across platforms.",
@@ -245,23 +128,15 @@ const ProjectsSection = () => {
         playstore: "https://play.google.com/store/apps/details?id=com.banking.kmp",
         appstore: "https://apps.apple.com/app/banking-kmp/id123456805",
         webapp: "https://banking-kmp.com"
+      },
+      overview: "Revolutionary banking application using Kotlin Multiplatform to share business logic across iOS and Android platforms.",
+      developmentProcess: "Leveraged Kotlin Multiplatform for shared business logic with platform-specific UI implementations using Compose Multiplatform.",
+      challengesAndSolutions: "Balancing shared code with platform-specific requirements. Created modular architecture allowing platform-specific optimizations while maintaining shared core logic.",
+      duration: {
+        start: "Jun 2023",
+        end: "Dec 2023"
       }
     },
-    {
-      title: "MultiOS Chat",
-      description: "Real-time messaging app using Compose Multiplatform for consistent UI across platforms.",
-      image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=500&h=300&fit=crop",
-      technologies: ["Compose Multiplatform", "Ktor", "WebSocket", "SQLDelight"],
-      downloads: "150K+ downloads",
-      features: ["Real-time messaging", "File sharing", "Group chats", "End-to-end encryption"],
-      category: "KMP/CMP",
-      links: {
-        playstore: "https://play.google.com/store/apps/details?id=com.chat.kmp",
-        appstore: "https://apps.apple.com/app/chat-kmp/id123456806",
-        webapp: "https://chat-kmp.com"
-      }
-    },
-    // Flutter Projects
     {
       title: "FlutterCommerce",
       description: "E-commerce app with beautiful animations and smooth user experience built with Flutter.",
@@ -274,23 +149,15 @@ const ProjectsSection = () => {
         playstore: "https://play.google.com/store/apps/details?id=com.flutter.commerce",
         appstore: "https://apps.apple.com/app/flutter-commerce/id123456807",
         webapp: "https://flutter-commerce.com"
+      },
+      overview: "Feature-rich e-commerce platform built with Flutter, focusing on smooth animations and user experience.",
+      developmentProcess: "Developed using Flutter's widget system with custom animations, Firebase backend integration, and Stripe payment processing.",
+      challengesAndSolutions: "Creating smooth animations while maintaining performance. Implemented custom animation controllers and optimized widget rebuilds.",
+      duration: {
+        start: "Apr 2023",
+        end: "Sep 2023"
       }
     },
-    {
-      title: "FlutterFitness",
-      description: "Comprehensive fitness tracking app with custom workout plans and social features.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop",
-      technologies: ["Flutter", "Provider", "SQLite", "Camera", "Charts"],
-      downloads: "180K+ downloads",
-      features: ["Workout plans", "Progress photos", "Social sharing", "Custom charts"],
-      category: "Flutter",
-      links: {
-        playstore: "https://play.google.com/store/apps/details?id=com.flutter.fitness",
-        appstore: "https://apps.apple.com/app/flutter-fitness/id123456808",
-        webapp: "https://flutter-fitness.com"
-      }
-    },
-    // React Native Projects
     {
       title: "RNSocialMedia",
       description: "Social media app with real-time features and cross-platform compatibility.",
@@ -303,23 +170,15 @@ const ProjectsSection = () => {
         playstore: "https://play.google.com/store/apps/details?id=com.rn.social",
         appstore: "https://apps.apple.com/app/rn-social/id123456809",
         webapp: "https://rn-social.com"
+      },
+      overview: "Full-featured social media platform with real-time capabilities and cross-platform compatibility.",
+      developmentProcess: "Built with React Native using Redux for state management and Socket.io for real-time communication features.",
+      challengesAndSolutions: "Managing real-time data updates efficiently. Implemented optimistic updates and smart caching strategies to maintain smooth user experience.",
+      duration: {
+        start: "Jan 2024",
+        end: "Jul 2024"
       }
     },
-    {
-      title: "RNDelivery",
-      description: "Food delivery app with live tracking and payment integration.",
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=500&h=300&fit=crop",
-      technologies: ["React Native", "Maps", "Payment SDK", "Push Notifications", "Geolocation"],
-      downloads: "320K+ downloads",
-      features: ["Live tracking", "Multiple payments", "Restaurant search", "Order history"],
-      category: "React Native",
-      links: {
-        playstore: "https://play.google.com/store/apps/details?id=com.rn.delivery",
-        appstore: "https://apps.apple.com/app/rn-delivery/id123456810",
-        webapp: "https://rn-delivery.com"
-      }
-    },
-    // Frontend Projects
     {
       title: "DashboardPro",
       description: "Modern admin dashboard with advanced analytics and data visualization.",
@@ -332,52 +191,15 @@ const ProjectsSection = () => {
         playstore: null,
         appstore: null,
         webapp: "https://dashboard-pro.com"
+      },
+      overview: "Comprehensive dashboard solution for business analytics with real-time data visualization and customizable widgets.",
+      developmentProcess: "Developed using React with TypeScript, implementing custom chart components and responsive design patterns.",
+      challengesAndSolutions: "Handling large datasets in real-time visualizations. Implemented data virtualization and efficient update mechanisms.",
+      duration: {
+        start: "Nov 2023",
+        end: "Mar 2024"
       }
     },
-    {
-      title: "PortfolioBuilder",
-      description: "Portfolio website builder with drag-and-drop interface and template library.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
-      technologies: ["Vue.js", "Nuxt", "SCSS", "Vuetify", "Pinia"],
-      downloads: "75K+ users",
-      features: ["Drag & drop", "Template library", "SEO optimized", "Mobile responsive"],
-      category: "Frontend",
-      links: {
-        playstore: null,
-        appstore: null,
-        webapp: "https://portfolio-builder.com"
-      }
-    },
-    // Backend Projects
-    {
-      title: "APIGateway",
-      description: "Scalable API gateway with authentication, rate limiting, and monitoring.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop",
-      technologies: ["Node.js", "Express", "Redis", "MongoDB", "JWT"],
-      downloads: "30K+ deployments",
-      features: ["Rate limiting", "API monitoring", "Authentication", "Load balancing"],
-      category: "Backend",
-      links: {
-        playstore: null,
-        appstore: null,
-        webapp: "https://api-gateway.com"
-      }
-    },
-    {
-      title: "MicroservicesKit",
-      description: "Microservices architecture template with Docker containers and service discovery.",
-      image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=500&h=300&fit=crop",
-      technologies: ["Spring Boot", "Docker", "Kubernetes", "PostgreSQL", "RabbitMQ"],
-      downloads: "25K+ deployments",
-      features: ["Service discovery", "Container orchestration", "Message queuing", "Health checks"],
-      category: "Backend",
-      links: {
-        playstore: null,
-        appstore: null,
-        webapp: "https://microservices-kit.com"
-      }
-    },
-    // Fullstack Projects
     {
       title: "SaaS Platform",
       description: "Complete SaaS platform with subscription management, analytics, and multi-tenancy.",
@@ -390,20 +212,13 @@ const ProjectsSection = () => {
         playstore: null,
         appstore: null,
         webapp: "https://saas-platform.com"
-      }
-    },
-    {
-      title: "E-Learning Platform",
-      description: "Comprehensive online learning platform with video streaming and progress tracking.",
-      image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=500&h=300&fit=crop",
-      technologies: ["MERN Stack", "AWS S3", "Socket.io", "Stripe", "CloudFront"],
-      downloads: "200K+ users",
-      features: ["Video streaming", "Progress tracking", "Live chat", "Certificate generation"],
-      category: "Fullstack",
-      links: {
-        playstore: null,
-        appstore: null,
-        webapp: "https://elearning-platform.com"
+      },
+      overview: "Complete SaaS solution providing subscription management, analytics, and multi-tenant architecture for businesses.",
+      developmentProcess: "Built with Next.js and Prisma ORM, implementing secure multi-tenant architecture with Stripe integration for subscription management.",
+      challengesAndSolutions: "Implementing secure multi-tenancy while maintaining performance. Created database isolation strategies and optimized query patterns.",
+      duration: {
+        start: "May 2023",
+        end: "Nov 2023"
       }
     }
   ];
@@ -420,7 +235,36 @@ const ProjectsSection = () => {
     return projects.filter(project => project.category === category).length;
   };
 
-  const ProjectGrid = ({ projects }: { projects: Array<typeof projects[0]> }) => (
+  const getProjectLinks = (project: Project) => {
+    const { category, links } = project;
+    
+    switch (category) {
+      case "Android":
+        return links.playstore ? [{ type: "playstore", url: links.playstore, icon: Smartphone, label: "Play Store" }] : [];
+      case "iOS":
+        return links.appstore ? [{ type: "appstore", url: links.appstore, icon: Apple, label: "App Store" }] : [];
+      case "Frontend":
+      case "Fullstack":
+        return [{ type: "webapp", url: links.webapp, icon: Globe, label: "Web App" }];
+      case "KMP/CMP":
+      case "Flutter":
+      case "React Native":
+        const linkList = [];
+        if (links.playstore) linkList.push({ type: "playstore", url: links.playstore, icon: Smartphone, label: "Play Store" });
+        if (links.appstore) linkList.push({ type: "appstore", url: links.appstore, icon: Apple, label: "App Store" });
+        return linkList;
+      default:
+        return [];
+    }
+  };
+
+  const handleViewDetails = (project: Project) => {
+    navigate(`/project/${encodeURIComponent(project.title.toLowerCase().replace(/\s+/g, '-'))}`, { 
+      state: { project } 
+    });
+  };
+
+  const ProjectGrid = ({ projects }: { projects: Project[] }) => (
     <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
       {projects.map((project, index) => (
         <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
@@ -470,29 +314,26 @@ const ProjectsSection = () => {
             </div>
 
             <div className="flex flex-wrap gap-2 pt-4">
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+              <Button 
+                size="sm" 
+                className="bg-blue-600 hover:bg-blue-700"
+                onClick={() => handleViewDetails(project)}
+              >
                 View Details
               </Button>
               <Button size="sm" variant="outline">
                 <Github className="w-4 h-4 mr-2" />
                 Code
               </Button>
-              {project.links.playstore && (
-                <Button size="sm" variant="outline">
-                  <Smartphone className="w-4 h-4 mr-2" />
-                  Play Store
-                </Button>
-              )}
-              {project.links.appstore && (
-                <Button size="sm" variant="outline">
-                  <Apple className="w-4 h-4 mr-2" />
-                  App Store
-                </Button>
-              )}
-              <Button size="sm" variant="outline">
-                <Globe className="w-4 h-4 mr-2" />
-                Web App
-              </Button>
+              {getProjectLinks(project).map((link, linkIndex) => {
+                const IconComponent = link.icon;
+                return (
+                  <Button key={linkIndex} size="sm" variant="outline">
+                    <IconComponent className="w-4 h-4 mr-2" />
+                    {link.label}
+                  </Button>
+                );
+              })}
             </div>
           </CardContent>
         </Card>
