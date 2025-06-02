@@ -1,10 +1,9 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { Github } from 'lucide-react';
+import { Github, Smartphone, Globe, Apple } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
@@ -15,7 +14,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "Jetpack Compose", "Firebase", "Room", "Hilt"],
       downloads: "100K+ downloads",
       features: ["Real-time workout tracking", "Social challenges", "Progress analytics", "Offline support"],
-      category: "Android"
+      category: "Android",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.fittracker.pro",
+        appstore: "https://apps.apple.com/app/fittracker-pro/id123456789",
+        webapp: "https://fittracker-pro.com"
+      }
     },
     {
       title: "EcoShop",
@@ -24,7 +28,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "MVVM", "Retrofit", "Glide", "Material Design"],
       downloads: "50K+ downloads",
       features: ["Product sustainability scores", "Carbon footprint tracking", "Local store finder", "Wishlist management"],
-      category: "Android"
+      category: "Android",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.ecoshop",
+        appstore: "https://apps.apple.com/app/ecoshop/id123456790",
+        webapp: "https://ecoshop.com"
+      }
     },
     {
       title: "CryptoWallet",
@@ -33,7 +42,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "Coroutines", "Biometric Auth", "Room", "Clean Architecture"],
       downloads: "25K+ downloads",
       features: ["Multi-currency support", "Biometric security", "Price alerts", "Portfolio analytics"],
-      category: "Android"
+      category: "Android",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.cryptowallet",
+        appstore: "https://apps.apple.com/app/cryptowallet/id123456791",
+        webapp: "https://cryptowallet.com"
+      }
     },
     {
       title: "TaskMaster",
@@ -42,7 +56,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "Clean Architecture", "Dagger", "Room", "WorkManager"],
       downloads: "75K+ downloads",
       features: ["Team collaboration", "Time tracking", "Gantt charts", "Push notifications"],
-      category: "Android"
+      category: "Android",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.taskmaster",
+        appstore: "https://apps.apple.com/app/taskmaster/id123456792",
+        webapp: "https://taskmaster.com"
+      }
     },
     {
       title: "FoodieFind",
@@ -51,7 +70,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "ARCore", "Google Maps", "Retrofit", "CameraX"],
       downloads: "40K+ downloads",
       features: ["AR menu scanner", "Table reservations", "Review system", "Location-based search"],
-      category: "Android"
+      category: "Android",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.foodiefind",
+        appstore: "https://apps.apple.com/app/foodiefind/id123456793",
+        webapp: "https://foodiefind.com"
+      }
     },
     {
       title: "MediTrack",
@@ -60,7 +84,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "Health Connect", "ML Kit", "Firebase", "HealthKit"],
       downloads: "60K+ downloads",
       features: ["Medication reminders", "Symptom logging", "Health reports", "Telemedicine integration"],
-      category: "Android"
+      category: "Android",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.meditrack",
+        appstore: "https://apps.apple.com/app/meditrack/id123456794",
+        webapp: "https://meditrack.com"
+      }
     },
     {
       title: "TravelGuide",
@@ -69,7 +98,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "Mapbox", "Room", "WorkManager", "Location Services"],
       downloads: "90K+ downloads",
       features: ["Offline maps", "Smart itineraries", "Local insights", "Expense tracking"],
-      category: "Android"
+      category: "Android",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.travelguide",
+        appstore: "https://apps.apple.com/app/travelguide/id123456795",
+        webapp: "https://travelguide.com"
+      }
     },
     {
       title: "StudyBuddy",
@@ -78,7 +112,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "Room", "Machine Learning", "Speech Recognition", "Material You"],
       downloads: "35K+ downloads",
       features: ["Spaced repetition", "Voice notes", "Study groups", "Progress tracking"],
-      category: "Android"
+      category: "Android",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.studybuddy",
+        appstore: "https://apps.apple.com/app/studybuddy/id123456796",
+        webapp: "https://studybuddy.com"
+      }
     },
     {
       title: "SmartHome",
@@ -87,7 +126,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "MQTT", "Bluetooth LE", "WiFi Direct", "Custom Views"],
       downloads: "20K+ downloads",
       features: ["Device control", "Energy monitoring", "Security alerts", "Voice commands"],
-      category: "Android"
+      category: "Android",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.smarthome",
+        appstore: "https://apps.apple.com/app/smarthome/id123456797",
+        webapp: "https://smarthome.com"
+      }
     },
     {
       title: "PhotoVault",
@@ -96,7 +140,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "ML Kit", "Encryption", "Cloud Storage", "CameraX"],
       downloads: "45K+ downloads",
       features: ["AI photo tagging", "Facial recognition", "Encrypted storage", "Smart albums"],
-      category: "Android"
+      category: "Android",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.photovault",
+        appstore: "https://apps.apple.com/app/photovault/id123456798",
+        webapp: "https://photovault.com"
+      }
     },
     {
       title: "BudgetWise",
@@ -105,7 +154,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "Chart Libraries", "Bank APIs", "Room", "Security"],
       downloads: "80K+ downloads",
       features: ["Expense categorization", "Budget alerts", "Investment tracking", "Financial insights"],
-      category: "Android"
+      category: "Android",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.budgetwise",
+        appstore: "https://apps.apple.com/app/budgetwise/id123456799",
+        webapp: "https://budgetwise.com"
+      }
     },
     {
       title: "WeatherPro",
@@ -114,7 +168,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "Weather APIs", "MapView", "Push Notifications", "Widget"],
       downloads: "150K+ downloads",
       features: ["Radar maps", "Severe alerts", "Hourly forecasts", "Widget support"],
-      category: "Android"
+      category: "Android",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.weatherpro",
+        appstore: "https://apps.apple.com/app/weatherpro/id123456800",
+        webapp: "https://weatherpro.com"
+      }
     },
     {
       title: "CodeSnippet",
@@ -123,7 +182,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin", "Syntax Highlighting", "GitHub API", "Room", "Search"],
       downloads: "15K+ downloads",
       features: ["Syntax highlighting", "Code search", "Team sharing", "Version control"],
-      category: "Android"
+      category: "Android",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.codesnippet",
+        appstore: "https://apps.apple.com/app/codesnippet/id123456801",
+        webapp: "https://codesnippet.com"
+      }
     },
     // iOS Projects
     {
@@ -133,7 +197,12 @@ const ProjectsSection = () => {
       technologies: ["Swift", "SwiftUI", "HealthKit", "WatchKit", "Core Data"],
       downloads: "120K+ downloads",
       features: ["HealthKit sync", "Apple Watch", "Heart rate monitoring", "Workout tracking"],
-      category: "iOS"
+      category: "iOS",
+      links: {
+        playstore: null,
+        appstore: "https://apps.apple.com/app/healthtracker-ios/id123456802",
+        webapp: "https://healthtracker-ios.com"
+      }
     },
     {
       title: "ShopSmart iOS",
@@ -142,7 +211,12 @@ const ProjectsSection = () => {
       technologies: ["Swift", "ARKit", "Vision", "Core ML", "StoreKit"],
       downloads: "85K+ downloads",
       features: ["AR scanning", "Price comparison", "Barcode reader", "Wishlist sync"],
-      category: "iOS"
+      category: "iOS",
+      links: {
+        playstore: null,
+        appstore: "https://apps.apple.com/app/shopsmart-ios/id123456803",
+        webapp: "https://shopsmart-ios.com"
+      }
     },
     {
       title: "MindfulMoments",
@@ -151,7 +225,12 @@ const ProjectsSection = () => {
       technologies: ["Swift", "AVFoundation", "CloudKit", "WidgetKit", "SiriKit"],
       downloads: "200K+ downloads",
       features: ["Guided meditation", "Siri shortcuts", "Widgets", "Cloud sync"],
-      category: "iOS"
+      category: "iOS",
+      links: {
+        playstore: null,
+        appstore: "https://apps.apple.com/app/mindfulmoments/id123456804",
+        webapp: "https://mindfulmoments.com"
+      }
     },
     // KMP/CMP Projects
     {
@@ -161,7 +240,12 @@ const ProjectsSection = () => {
       technologies: ["Kotlin Multiplatform", "Ktor", "SQLDelight", "Compose Multiplatform"],
       downloads: "300K+ downloads",
       features: ["Cross-platform", "Secure transactions", "Biometric auth", "Real-time updates"],
-      category: "KMP/CMP"
+      category: "KMP/CMP",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.banking.kmp",
+        appstore: "https://apps.apple.com/app/banking-kmp/id123456805",
+        webapp: "https://banking-kmp.com"
+      }
     },
     {
       title: "MultiOS Chat",
@@ -170,7 +254,12 @@ const ProjectsSection = () => {
       technologies: ["Compose Multiplatform", "Ktor", "WebSocket", "SQLDelight"],
       downloads: "150K+ downloads",
       features: ["Real-time messaging", "File sharing", "Group chats", "End-to-end encryption"],
-      category: "KMP/CMP"
+      category: "KMP/CMP",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.chat.kmp",
+        appstore: "https://apps.apple.com/app/chat-kmp/id123456806",
+        webapp: "https://chat-kmp.com"
+      }
     },
     // Flutter Projects
     {
@@ -180,7 +269,12 @@ const ProjectsSection = () => {
       technologies: ["Flutter", "Dart", "Firebase", "Stripe", "GetX"],
       downloads: "250K+ downloads",
       features: ["Custom animations", "Payment gateway", "Push notifications", "Offline support"],
-      category: "Flutter"
+      category: "Flutter",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.flutter.commerce",
+        appstore: "https://apps.apple.com/app/flutter-commerce/id123456807",
+        webapp: "https://flutter-commerce.com"
+      }
     },
     {
       title: "FlutterFitness",
@@ -189,7 +283,12 @@ const ProjectsSection = () => {
       technologies: ["Flutter", "Provider", "SQLite", "Camera", "Charts"],
       downloads: "180K+ downloads",
       features: ["Workout plans", "Progress photos", "Social sharing", "Custom charts"],
-      category: "Flutter"
+      category: "Flutter",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.flutter.fitness",
+        appstore: "https://apps.apple.com/app/flutter-fitness/id123456808",
+        webapp: "https://flutter-fitness.com"
+      }
     },
     // React Native Projects
     {
@@ -199,7 +298,12 @@ const ProjectsSection = () => {
       technologies: ["React Native", "Redux", "Socket.io", "AsyncStorage", "React Navigation"],
       downloads: "400K+ downloads",
       features: ["Real-time feed", "Stories", "Direct messaging", "Photo filters"],
-      category: "React Native"
+      category: "React Native",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.rn.social",
+        appstore: "https://apps.apple.com/app/rn-social/id123456809",
+        webapp: "https://rn-social.com"
+      }
     },
     {
       title: "RNDelivery",
@@ -208,7 +312,12 @@ const ProjectsSection = () => {
       technologies: ["React Native", "Maps", "Payment SDK", "Push Notifications", "Geolocation"],
       downloads: "320K+ downloads",
       features: ["Live tracking", "Multiple payments", "Restaurant search", "Order history"],
-      category: "React Native"
+      category: "React Native",
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.rn.delivery",
+        appstore: "https://apps.apple.com/app/rn-delivery/id123456810",
+        webapp: "https://rn-delivery.com"
+      }
     },
     // Frontend Projects
     {
@@ -218,7 +327,12 @@ const ProjectsSection = () => {
       technologies: ["React", "TypeScript", "Recharts", "Tailwind CSS", "Zustand"],
       downloads: "50K+ users",
       features: ["Real-time analytics", "Custom charts", "Dark mode", "Responsive design"],
-      category: "Frontend"
+      category: "Frontend",
+      links: {
+        playstore: null,
+        appstore: null,
+        webapp: "https://dashboard-pro.com"
+      }
     },
     {
       title: "PortfolioBuilder",
@@ -227,7 +341,12 @@ const ProjectsSection = () => {
       technologies: ["Vue.js", "Nuxt", "SCSS", "Vuetify", "Pinia"],
       downloads: "75K+ users",
       features: ["Drag & drop", "Template library", "SEO optimized", "Mobile responsive"],
-      category: "Frontend"
+      category: "Frontend",
+      links: {
+        playstore: null,
+        appstore: null,
+        webapp: "https://portfolio-builder.com"
+      }
     },
     // Backend Projects
     {
@@ -237,7 +356,12 @@ const ProjectsSection = () => {
       technologies: ["Node.js", "Express", "Redis", "MongoDB", "JWT"],
       downloads: "30K+ deployments",
       features: ["Rate limiting", "API monitoring", "Authentication", "Load balancing"],
-      category: "Backend"
+      category: "Backend",
+      links: {
+        playstore: null,
+        appstore: null,
+        webapp: "https://api-gateway.com"
+      }
     },
     {
       title: "MicroservicesKit",
@@ -246,7 +370,12 @@ const ProjectsSection = () => {
       technologies: ["Spring Boot", "Docker", "Kubernetes", "PostgreSQL", "RabbitMQ"],
       downloads: "25K+ deployments",
       features: ["Service discovery", "Container orchestration", "Message queuing", "Health checks"],
-      category: "Backend"
+      category: "Backend",
+      links: {
+        playstore: null,
+        appstore: null,
+        webapp: "https://microservices-kit.com"
+      }
     },
     // Fullstack Projects
     {
@@ -256,7 +385,12 @@ const ProjectsSection = () => {
       technologies: ["Next.js", "Prisma", "Stripe", "Vercel", "PostgreSQL"],
       downloads: "100K+ users",
       features: ["Subscription billing", "Multi-tenancy", "Analytics dashboard", "API management"],
-      category: "Fullstack"
+      category: "Fullstack",
+      links: {
+        playstore: null,
+        appstore: null,
+        webapp: "https://saas-platform.com"
+      }
     },
     {
       title: "E-Learning Platform",
@@ -265,7 +399,12 @@ const ProjectsSection = () => {
       technologies: ["MERN Stack", "AWS S3", "Socket.io", "Stripe", "CloudFront"],
       downloads: "200K+ users",
       features: ["Video streaming", "Progress tracking", "Live chat", "Certificate generation"],
-      category: "Fullstack"
+      category: "Fullstack",
+      links: {
+        playstore: null,
+        appstore: null,
+        webapp: "https://elearning-platform.com"
+      }
     }
   ];
 
@@ -281,7 +420,7 @@ const ProjectsSection = () => {
     return projects.filter(project => project.category === category).length;
   };
 
-  const ProjectGrid = ({ projects }: { projects: typeof projects }) => (
+  const ProjectGrid = ({ projects }: { projects: Array<typeof projects[0]> }) => (
     <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
       {projects.map((project, index) => (
         <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
@@ -330,13 +469,29 @@ const ProjectsSection = () => {
               </ul>
             </div>
 
-            <div className="flex gap-3 pt-4">
+            <div className="flex flex-wrap gap-2 pt-4">
               <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
                 View Details
               </Button>
               <Button size="sm" variant="outline">
                 <Github className="w-4 h-4 mr-2" />
                 Code
+              </Button>
+              {project.links.playstore && (
+                <Button size="sm" variant="outline">
+                  <Smartphone className="w-4 h-4 mr-2" />
+                  Play Store
+                </Button>
+              )}
+              {project.links.appstore && (
+                <Button size="sm" variant="outline">
+                  <Apple className="w-4 h-4 mr-2" />
+                  App Store
+                </Button>
+              )}
+              <Button size="sm" variant="outline">
+                <Globe className="w-4 h-4 mr-2" />
+                Web App
               </Button>
             </div>
           </CardContent>

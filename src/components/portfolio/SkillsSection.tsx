@@ -44,6 +44,14 @@ const SkillsSection = () => {
     {
       title: "Backend & Cloud",
       skills: ["Firebase", "AWS", "Google Cloud", "REST APIs", "GraphQL", "WebSockets", "Node.js", "Express.js", "MongoDB", "PostgreSQL", "Redis", "Docker"]
+    },
+    {
+      title: "AI Skills",
+      skills: ["Machine Learning", "TensorFlow", "PyTorch", "Scikit-learn", "Natural Language Processing", "Computer Vision", "Deep Learning", "Neural Networks", "OpenAI API", "Langchain", "Vector Databases", "Prompt Engineering", "AI Model Integration", "MLOps", "Data Science", "Pandas", "NumPy"]
+    },
+    {
+      title: "Vibe Coding Tools",
+      skills: ["GitHub Copilot", "ChatGPT", "Claude AI", "Cursor IDE", "Tabnine", "Lovable", "Replit", "CodePen", "Figma", "Linear", "Notion", "Obsidian", "Arc Browser", "Raycast", "iTerm2", "Oh My Zsh"]
     }
   ];
 
