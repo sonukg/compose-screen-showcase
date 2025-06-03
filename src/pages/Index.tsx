@@ -8,6 +8,7 @@ import ExperienceSection from '@/components/portfolio/ExperienceSection';
 import EducationSection from '@/components/portfolio/EducationSection';
 import ContactSection from '@/components/portfolio/ContactSection';
 import Navigation from '@/components/portfolio/Navigation';
+import Footer from '@/components/portfolio/Footer';
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
         <EducationSection />
         <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 };

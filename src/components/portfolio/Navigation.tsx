@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '@/contexts/ThemeContext';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,10 +31,10 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="text-2xl font-bold text-gray-900 dark:text-white">
-            Alex Chen
+            Sonu Kumar
           </div>
           <div className="hidden md:flex space-x-8 items-center">
-            {['About', 'Skills', 'Projects', 'Experience', 'Education', 'Contact'].map((item) => (
+            {['About', 'Skills', 'Projects', 'Experience', 'Education'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -42,6 +43,18 @@ const Navigation = () => {
                 {item}
               </button>
             ))}
+            <Link
+              to="/blog"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Blog
+            </Link>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Contact
+            </button>
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
