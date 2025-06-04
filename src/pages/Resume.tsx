@@ -31,6 +31,13 @@ const Resume = () => {
     document.body.removeChild(link);
   };
 
+  const triggerFileUpload = () => {
+    const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+    if (fileInput) {
+      fileInput.click();
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Navigation />
@@ -67,7 +74,7 @@ const Resume = () => {
                 className="flex-1"
               />
               <Button 
-                onClick={() => document.querySelector('input[type="file"]')?.click()}
+                onClick={triggerFileUpload}
                 variant="outline"
                 className="w-full sm:w-auto"
               >
