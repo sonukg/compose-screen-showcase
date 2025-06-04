@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navigation from '@/components/portfolio/Navigation';
 import Footer from '@/components/portfolio/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -71,6 +72,12 @@ const blogPosts = [
 ];
 
 const Blog = () => {
+  const navigate = useNavigate();
+
+  const handleReadMore = (postId: number) => {
+    navigate(`/blog/${postId}`);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Navigation />
@@ -90,7 +97,7 @@ const Blog = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
               {blogPosts.map((post) => (
-                <Card key={post.id} className="group hover:shadow-lg transition-shadow duration-300">
+                <Card key={post.id} className="group hover:shadow-lg transition-all duration-300 cursor-pointer" onClick={() => handleReadMore(post.id)}>
                   <div className="aspect-video bg-gray-200 dark:bg-gray-700 rounded-t-lg mb-4"></div>
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
@@ -121,7 +128,10 @@ const Blog = () => {
                         </Badge>
                       ))}
                     </div>
-                    <Button variant="ghost" className="w-full group">
+                    <Button variant="ghost" className="w-full group" onClick={(e) => {
+                      e.stopPropagation();
+                      handleReadMore(post.id);
+                    }}>
                       Read More
                       <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
