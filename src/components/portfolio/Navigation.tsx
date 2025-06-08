@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Moon, Sun, Edit } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '@/contexts/ThemeContext';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
@@ -85,12 +85,6 @@ const Navigation = () => {
             >
               Contact
             </button>
-            <Link
-              to="/editor"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              <Edit className="w-5 h-5" />
-            </Link>
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
