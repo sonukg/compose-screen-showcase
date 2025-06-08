@@ -5,55 +5,25 @@ import { Card, CardContent } from '@/components/ui/card';
 const EducationSection = () => {
   const education = [
     {
-      degree: "Master of Computer Science",
-      institution: "Stanford University",
-      location: "Stanford, CA",
-      period: "2015 - 2017",
-      description: "Specialized in Mobile Computing and Human-Computer Interaction. Thesis on 'Optimizing User Experience in Cross-Platform Mobile Applications'.",
+      degree: "Master of Computer Application (MCA)",
+      institution: "Dr Baba Saheb Ambedkar Marathwada University",
+      location: "Aurangabad, Maharashtra",
+      period: "2018",
+      description: "Master's degree in Computer Application with comprehensive foundation in software development, programming languages, and computer science principles.",
       achievements: [
-        "GPA: 3.9/4.0",
-        "Dean's List for 4 consecutive semesters",
-        "Research Assistant in Mobile Computing Lab"
-      ]
-    },
-    {
-      degree: "Bachelor of Software Engineering",
-      institution: "University of California, Berkeley",
-      location: "Berkeley, CA",
-      period: "2011 - 2015",
-      description: "Comprehensive foundation in software engineering principles, algorithms, and data structures with focus on mobile development.",
-      achievements: [
-        "Magna Cum Laude (GPA: 3.8/4.0)",
-        "President of Mobile Development Club",
-        "Winner of UC Berkeley Hackathon 2014"
+        "CGPA: 6.8/10",
+        "Specialized in software development and mobile technologies",
+        "Strong foundation in programming and system design"
       ]
     }
   ];
 
   const certifications = [
     {
-      title: "Google Associate Android Developer",
-      issuer: "Google",
-      date: "2023",
-      credentialId: "ABC123456"
-    },
-    {
-      title: "Kotlin Multiplatform Mobile Developer",
-      issuer: "JetBrains",
-      date: "2023",
-      credentialId: "KMP789012"
-    },
-    {
-      title: "AWS Certified Developer - Associate",
-      issuer: "Amazon Web Services",
-      date: "2022",
-      credentialId: "AWS345678"
-    },
-    {
-      title: "Flutter Certified Developer",
-      issuer: "Google",
-      date: "2022",
-      credentialId: "FLT901234"
+      title: "Certificate in Android Application Development",
+      issuer: "BitCode Technologies Pvt. Ltd.",
+      date: "2018",
+      location: "Pune, Maharashtra"
     }
   ];
 
@@ -63,7 +33,7 @@ const EducationSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Education & Certifications</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Academic foundation and professional certifications that drive my expertise
+            Academic foundation and professional certifications that drive my expertise in mobile development
           </p>
         </div>
 
@@ -105,7 +75,7 @@ const EducationSection = () => {
         {/* Certifications */}
         <div>
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Professional Certifications</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6">
             {certifications.map((cert, index) => (
               <Card key={index} className="border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
                 <CardContent className="p-6">
@@ -113,7 +83,7 @@ const EducationSection = () => {
                   <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">{cert.issuer}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600 dark:text-gray-400 text-sm">Issued: {cert.date}</span>
-                    <span className="text-gray-500 dark:text-gray-500 text-xs">ID: {cert.credentialId}</span>
+                    <span className="text-gray-500 dark:text-gray-500 text-xs">{cert.location}</span>
                   </div>
                 </CardContent>
               </Card>

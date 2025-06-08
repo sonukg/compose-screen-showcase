@@ -6,82 +6,82 @@ import { Badge } from '@/components/ui/badge';
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Senior Android Developer",
-      company: "TechCorp Inc.",
-      period: "2022 - Present",
-      location: "San Francisco, CA",
-      description: "Lead Android development for flagship mobile app with 5M+ users. Architect and implement new features using Jetpack Compose and modern Android technologies.",
+      title: "Consultant (Android)",
+      company: "KRG Technologies",
+      period: "June 2023 - July 2024",
+      location: "Chennai",
+      description: "Worked as Software Engineer for Mobile Banking Application to build a robust payment system within a banking mobile app, focusing on the seamless integration of UPI and UPI Lite technologies to enhance transaction efficiency.",
       achievements: [
-        "Improved app performance by 40% through code optimization",
-        "Led migration from XML to Jetpack Compose",
-        "Mentored team of 5 junior developers",
-        "Implemented CI/CD pipeline reducing deployment time by 60%"
+        "Ensured intuitive and user-friendly interface for payment system, prioritizing smooth and secure experience for app users",
+        "Implemented state-of-the-art security measures within payment system, adhering to industry standards and regulations",
+        "Collaborated seamlessly with cross-functional teams including backend developers, QA engineers, and product managers",
+        "Contributed to seamless integration of payment system with other app features for cohesive mobile banking experience"
       ],
-      technologies: ["Kotlin", "Jetpack Compose", "Hilt", "Coroutines", "Firebase"]
+      technologies: ["Android", "Kotlin", "UPI", "UPI Lite", "Payment Systems", "Banking"]
+    },
+    {
+      title: "Solution Developer (Android)",
+      company: "Tata Technologies",
+      period: "December 2021 - May 2023",
+      location: "Pune, Maharashtra",
+      description: "Developed Cummins Saathi App with five different personas for different types of Cummins users. All-in-one app for Cummins users to perform work through this app, available in 11 native languages of India.",
+      achievements: [
+        "Built app with rich features such as customized maps and easy-to-understand training videos",
+        "Implemented leadership board showing national & regional level ranks",
+        "Integrated MITWA's reward points system",
+        "Delivered technologically advanced and user-friendly platform aligning with Cummins' mission"
+      ],
+      technologies: ["Android", "Kotlin", "Maps Integration", "Multilingual Support", "Reward Systems"]
+    },
+    {
+      title: "Senior Android Developer",
+      company: "Rdiobutton",
+      period: "April 2021 - December 2021",
+      location: "Pune, Maharashtra",
+      description: "Developed different apps including Storex App in Android to automate process of receiving and delivering chemical-related products for different sites located at different locations.",
+      achievements: [
+        "Developed Storex App for chemical products automation across multiple locations",
+        "Built Coolberg Team App - a social networking app for product branding in Flutter",
+        "Engineered and deployed scalable Android application architecture leveraging Kotlin and MVVM",
+        "Enhanced app stability through modern architecture patterns"
+      ],
+      technologies: ["Android", "Kotlin", "Flutter", "MVVM", "Social Networking", "Process Automation"]
     },
     {
       title: "Android Developer",
-      company: "StartupXYZ",
-      period: "2020 - 2022",
-      location: "New York, NY",
-      description: "Developed multiple Android applications from concept to production. Collaborated with cross-functional teams to deliver high-quality mobile experiences.",
+      company: "Etonius IT Solutions",
+      period: "December 2018 - April 2021",
+      location: "Pune, Maharashtra",
+      description: "Developed several apps including Yash Attendance Management, SCGT (Saturday Club Global Trust), Shreeji Vending Service, and Shreenath Diary Management App, all published on Play Store.",
       achievements: [
-        "Built 3 successful apps with 500K+ combined downloads",
-        "Implemented offline-first architecture",
-        "Reduced crash rate by 85% through comprehensive testing",
-        "Introduced code review practices and coding standards"
+        "Published multiple successful apps on Google Play Store",
+        "Developed projects such as Tingtongue app, Crazyburger app, Yogiraj YCT App, Bizsol App",
+        "Integrated notification management system for Android applications",
+        "Achieved 30% increase in user engagement and retention across four major apps"
       ],
-      technologies: ["Kotlin", "MVVM", "Room", "Retrofit", "RxJava"]
-    },
-    {
-      title: "Mobile App Developer",
-      company: "InnovateTech Solutions",
-      period: "2017 - 2020",
-      location: "Seattle, WA",
-      description: "Full-stack mobile developer working on both Android and cross-platform solutions. Specialized in healthcare and fintech applications with strict security requirements.",
-      achievements: [
-        "Developed HIPAA-compliant healthcare apps serving 200K+ patients",
-        "Implemented advanced security features including biometric authentication",
-        "Led cross-platform development initiatives using React Native",
-        "Achieved 99.9% uptime for critical financial applications"
-      ],
-      technologies: ["Kotlin", "Java", "React Native", "Security", "FHIR", "Encryption"]
-    },
-    {
-      title: "Junior Android Developer",
-      company: "Mobile Solutions Ltd.",
-      period: "2016 - 2017",
-      location: "Austin, TX",
-      description: "Developed and maintained Android applications for various clients. Gained experience in different industries and app types.",
-      achievements: [
-        "Delivered 8 client projects on time and within budget",
-        "Learned modern Android development best practices",
-        "Contributed to open-source Android libraries",
-        "Participated in Google I/O and Android conferences"
-      ],
-      technologies: ["Java", "Kotlin", "MVP", "Volley", "SQLite"]
+      technologies: ["Android", "Java", "Kotlin", "Flutter", "Firebase", "Notification Systems"]
     }
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Work Experience</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            My professional journey in Android development
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Work Experience</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            My professional journey in Android development and mobile technologies
           </p>
         </div>
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="border-l-4 border-l-blue-600">
+            <Card key={index} className="border-l-4 border-l-blue-600 dark:border-l-blue-400">
               <CardContent className="p-8">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{exp.title}</h3>
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-gray-600">
-                      <span className="font-semibold text-blue-600">{exp.company}</span>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{exp.title}</h3>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-gray-600 dark:text-gray-400">
+                      <span className="font-semibold text-blue-600 dark:text-blue-400">{exp.company}</span>
                       <span className="hidden sm:block">•</span>
                       <span>{exp.location}</span>
                     </div>
@@ -91,14 +91,14 @@ const ExperienceSection = () => {
                   </Badge>
                 </div>
 
-                <p className="text-gray-600 mb-6">{exp.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-6">{exp.description}</p>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Achievements:</h4>
-                  <ul className="grid md:grid-cols-2 gap-2">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Achievements:</h4>
+                  <ul className="grid md:grid-cols-1 gap-2">
                     {exp.achievements.map((achievement, achIndex) => (
-                      <li key={achIndex} className="flex items-start text-gray-600">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <li key={achIndex} className="flex items-start text-gray-600 dark:text-gray-300">
+                        <span className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                         {achievement}
                       </li>
                     ))}
@@ -106,10 +106,10 @@ const ExperienceSection = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies Used:</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Technologies Used:</h4>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="bg-blue-100 text-blue-800">
+                      <Badge key={techIndex} variant="secondary" className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">
                         {tech}
                       </Badge>
                     ))}
