@@ -52,6 +52,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom palette colors
+				peach: {
+					50: '#FFCDB2',
+					100: '#FFB4A2', 
+					200: '#E5989B',
+					300: '#B5828C'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
