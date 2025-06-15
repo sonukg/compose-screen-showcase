@@ -32,20 +32,20 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "alex.chen@example.com",
-      link: "mailto:alex.chen@example.com"
+      value: "sonukg97@gmail.com",
+      link: "mailto:sonukg97@gmail.com"
     },
     {
       icon: Github,
       title: "GitHub",
-      value: "github.com/alexchen",
-      link: "https://github.com/alexchen"
+      value: "github.com/sonukg",
+      link: "https://github.com/sonukg"
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
-      value: "linkedin.com/in/alexchen",
-      link: "https://linkedin.com/in/alexchen"
+      value: "linkedin.com/in/sonukumar97",
+      link: "https://www.linkedin.com/in/sonukumar97"
     }
   ];
 

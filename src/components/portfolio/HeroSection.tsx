@@ -48,13 +48,13 @@ const HeroSection = () => {
         </div>
 
         <div className="flex justify-center space-x-6 mb-12">
-          <a href="https://github.com" className="text-gray-600 hover:text-blue-600 transition-colors">
+          <a href="https://github.com/sonukg" className="text-gray-600 hover:text-blue-600 transition-colors">
             <Github className="w-6 h-6" />
           </a>
-          <a href="https://linkedin.com" className="text-gray-600 hover:text-blue-600 transition-colors">
+          <a href="https://www.linkedin.com/in/sonukumar97" className="text-gray-600 hover:text-blue-600 transition-colors">
             <Linkedin className="w-6 h-6" />
           </a>
-          <a href="mailto:sonu@example.com" className="text-gray-600 hover:text-blue-600 transition-colors">
+          <a href="mailto:sonukg97@gmail.com" className="text-gray-600 hover:text-blue-600 transition-colors">
             <Mail className="w-6 h-6" />
           </a>
         </div>
