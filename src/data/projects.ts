@@ -189,6 +189,69 @@ export const projects: Project[] = [
       start: "Mar 2020",
       end: "Jun 2020"
     }
+  },
+  {
+    title: "Expense Tracker App",
+    description: "Comprehensive expense tracking application for iOS with budget management, category-wise spending analysis, and financial insights.",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop",
+    technologies: ["iOS", "Swift", "SwiftUI", "Core Data", "CloudKit", "Charts"],
+    downloads: "Featured on App Store",
+    features: ["Expense tracking", "Budget management", "Category analysis", "Financial insights", "Cloud sync", "Data visualization"],
+    category: "iOS",
+    links: {
+      playstore: null,
+      appstore: "https://apps.apple.com/app/expense-tracker",
+      webapp: "https://expensetracker.com"
+    },
+    overview: "Advanced expense tracking solution for iOS users with comprehensive budget management and financial analytics.",
+    developmentProcess: "Built using SwiftUI and Core Data with CloudKit integration for seamless data synchronization across devices.",
+    challengesAndSolutions: "Implemented advanced data visualization achieving 90% user satisfaction and 40% improvement in financial awareness.",
+    duration: {
+      start: "Mar 2023",
+      end: "Jun 2023"
+    }
+  },
+  {
+    title: "News App",
+    description: "Cross-platform news application built with Kotlin Multiplatform providing real-time news updates with personalized content and offline reading.",
+    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=500&h=300&fit=crop",
+    technologies: ["Kotlin Multiplatform", "Compose Multiplatform", "Ktor", "SQLDelight", "Koin"],
+    downloads: "50K+ downloads across platforms",
+    features: ["Real-time news", "Personalized content", "Offline reading", "Multi-platform support", "Push notifications", "Category filtering"],
+    category: "KMP/CMP",
+    links: {
+      playstore: "https://play.google.com/store/apps/details?id=com.newsapp.kmp",
+      appstore: "https://apps.apple.com/app/news-kmp",
+      webapp: "https://newsapp.com"
+    },
+    overview: "Multi-platform news application delivering real-time updates with shared business logic across Android and iOS.",
+    developmentProcess: "Developed using Kotlin Multiplatform with Compose Multiplatform for shared UI components and business logic.",
+    challengesAndSolutions: "Achieved 95% code sharing between platforms and 60% faster development cycle with unified architecture.",
+    duration: {
+      start: "Jan 2024",
+      end: "Apr 2024"
+    }
+  },
+  {
+    title: "Nutrition App",
+    description: "Health and nutrition tracking application built with Kotlin Multiplatform featuring meal planning, calorie tracking, and nutritional analysis.",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop",
+    technologies: ["Kotlin Multiplatform", "Compose Multiplatform", "Room", "DataStore", "Health APIs"],
+    downloads: "30K+ active users",
+    features: ["Meal planning", "Calorie tracking", "Nutritional analysis", "Progress monitoring", "Recipe suggestions", "Health integration"],
+    category: "KMP/CMP",
+    links: {
+      playstore: "https://play.google.com/store/apps/details?id=com.nutrition.kmp",
+      appstore: "https://apps.apple.com/app/nutrition-kmp",
+      webapp: "https://nutritionapp.com"
+    },
+    overview: "Cross-platform nutrition tracking solution with comprehensive meal planning and health monitoring capabilities.",
+    developmentProcess: "Built with shared business logic and UI components using Kotlin Multiplatform and Compose Multiplatform technologies.",
+    challengesAndSolutions: "Integrated with platform-specific health APIs achieving 85% user engagement and 45% improvement in health goal tracking.",
+    duration: {
+      start: "Aug 2023",
+      end: "Dec 2023"
+    }
   }
 ];
 
