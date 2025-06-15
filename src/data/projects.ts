@@ -192,4 +192,4 @@ export const projects: Project[] = [
   }
 ];
 
-export const categories = ["All", "Android", "Flutter", "Banking", "Enterprise", "E-commerce", "Management"];
+export const categories = ["All", "Android", "iOS", "Flutter", "KMP/CMP", "React Native", "Frontend", "Backend", "Fullstack"];
