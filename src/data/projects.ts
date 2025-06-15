@@ -110,10 +110,10 @@ export const projects: Project[] = [
     title: "YAMS - Yash Attendance Management System",
     description: "Comprehensive attendance management system for vehicle showroom with automated tracking and administrative efficiency features.",
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=300&fit=crop",
-    technologies: ["Android", "Java", "Kotlin", "Attendance Tracking", "Database Management"],
+    technologies: ["Flutter", "Dart", "Firebase", "Attendance Tracking", "Database Management"],
     downloads: "40% reduction in manual errors",
     features: ["Automated attendance tracking", "Administrative efficiency", "Error reduction", "Time theft prevention", "Showroom management"],
-    category: "Android",
+    category: "Flutter",
     links: {
       playstore: "https://play.google.com/store/apps/details?id=com.etonius.yashhond&hl=en",
       appstore: null,
@@ -251,6 +251,90 @@ export const projects: Project[] = [
     duration: {
       start: "Aug 2023",
       end: "Dec 2023"
+    }
+  },
+  {
+    title: "Budget App",
+    description: "Cross-platform budget management application built with Kotlin Multiplatform featuring expense tracking, savings goals, and financial planning tools.",
+    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=500&h=300&fit=crop",
+    technologies: ["Kotlin Multiplatform", "Compose Multiplatform", "SQLDelight", "DataStore", "Charts"],
+    downloads: "25K+ active users",
+    features: ["Budget tracking", "Expense categorization", "Savings goals", "Financial reports", "Multi-currency support", "Cloud sync"],
+    category: "KMP/CMP",
+    links: {
+      playstore: "https://play.google.com/store/apps/details?id=com.budget.kmp",
+      appstore: "https://apps.apple.com/app/budget-kmp",
+      webapp: "https://budgetapp.com"
+    },
+    overview: "Comprehensive budget management solution with shared business logic across platforms for effective financial planning.",
+    developmentProcess: "Built using Kotlin Multiplatform with shared UI components and financial calculation logic for consistent user experience.",
+    challengesAndSolutions: "Achieved 90% code reuse between platforms and 50% improvement in budget accuracy through advanced analytics.",
+    duration: {
+      start: "May 2024",
+      end: "Aug 2024"
+    }
+  },
+  {
+    title: "Shreenath Dairy Management App",
+    description: "Comprehensive dairy management application for tracking incoming, outgoing products and delivery management with inventory control.",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=500&h=300&fit=crop",
+    technologies: ["Android", "Kotlin", "Inventory Management", "Delivery Tracking", "Database Management"],
+    downloads: "30% improvement in inventory accuracy",
+    features: ["Product tracking", "Delivery management", "Inventory control", "Quality monitoring", "Order processing", "Supply chain optimization"],
+    category: "Android",
+    links: {
+      playstore: "https://play.google.com/store/apps/details?id=com.shreenath.dairy",
+      appstore: null,
+      webapp: "https://shreenath.com"
+    },
+    overview: "Digital dairy management solution streamlining product flow from incoming to delivery with comprehensive inventory tracking.",
+    developmentProcess: "Engineered to handle complex dairy supply chain operations with real-time tracking and quality management systems.",
+    challengesAndSolutions: "Improved inventory accuracy by 30% and reduced product wastage by 25% through automated tracking and quality controls.",
+    duration: {
+      start: "Feb 2021",
+      end: "Jul 2021"
+    }
+  },
+  {
+    title: "Tingtongue App",
+    description: "Digital grocery and fruits management application for inventory tracking, order processing, and product management with real-time updates.",
+    image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&h=300&fit=crop",
+    technologies: ["Android", "Kotlin", "Inventory Management", "Order Processing", "Real-time Updates"],
+    downloads: "45% increase in order efficiency",
+    features: ["Inventory management", "Product cataloging", "Order processing", "Stock alerts", "Sales tracking", "Customer management"],
+    category: "Android",
+    links: {
+      playstore: "https://play.google.com/store/apps/details?id=com.tingtongue.grocery",
+      appstore: null,
+      webapp: "https://tingtongue.com"
+    },
+    overview: "Comprehensive grocery and fruits management platform enabling digital inventory control and streamlined order processing.",
+    developmentProcess: "Developed with focus on real-time inventory updates and efficient order management for fresh produce businesses.",
+    challengesAndSolutions: "Achieved 45% increase in order efficiency and 35% reduction in stock shortages through automated inventory alerts.",
+    duration: {
+      start: "Sep 2020",
+      end: "Jan 2021"
+    }
+  },
+  {
+    title: "Crazyburger App",
+    description: "Digital burger delivery management application for order processing, delivery tracking, and inventory management with real-time updates.",
+    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&h=300&fit=crop",
+    technologies: ["Android", "Kotlin", "Delivery Management", "Order Processing", "Location Services"],
+    downloads: "40% faster delivery times",
+    features: ["Order management", "Delivery tracking", "Menu management", "Customer notifications", "Payment integration", "Driver coordination"],
+    category: "Android",
+    links: {
+      playstore: "https://play.google.com/store/apps/details?id=com.crazyburger.delivery",
+      appstore: null,
+      webapp: "https://crazyburger.com"
+    },
+    overview: "Streamlined burger delivery platform managing entire order lifecycle from placement to delivery with real-time tracking.",
+    developmentProcess: "Built to optimize food delivery operations with integrated tracking systems and automated customer notifications.",
+    challengesAndSolutions: "Reduced delivery times by 40% and improved customer satisfaction by 50% through efficient order management and tracking.",
+    duration: {
+      start: "Nov 2020",
+      end: "Mar 2021"
     }
   }
 ];
