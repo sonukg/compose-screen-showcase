@@ -43,6 +43,21 @@ const Footer = () => {
                 <span className="text-gray-400">Mobile App Development</span>
               </li>
               <li>
+                <span className="text-gray-400">IOS App Development</span>
+              </li>
+              <li>
+                <span className="text-gray-400">Flutter App Development</span>
+              </li>
+              <li>
+                <span className="text-gray-400">KMP/CMP App Development</span>
+              </li>
+              <li>
+                <span className="text-gray-400">Hybrid Mobile Development</span>
+              </li>
+              <li>
+                <span className="text-gray-400">Multiplatform App Development</span>
+              </li>
+              <li>
                 <span className="text-gray-400">Web Development</span>
               </li>
               <li>
