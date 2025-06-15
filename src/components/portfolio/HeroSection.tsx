@@ -26,7 +26,7 @@ const HeroSection = () => {
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Passionate Android developer with 6+ years of experience building scalable, 
-            user-friendly mobile applications. Specialized in Kotlin, Jetpack Compose, 
+            user-friendly mobile applications. 15+ Apps Published. Specialized in Kotlin, Jetpack Compose, 
             and modern Android architecture patterns.
           </p>
         </div>
