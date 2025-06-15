@@ -12,7 +12,7 @@ const AboutSection = () => {
     },
     {
       icon: User,
-      title: "12+ Apps Published",
+      title: "15+ Apps Published",
       description: "Successfully delivered apps with millions of downloads"
     },
     {
