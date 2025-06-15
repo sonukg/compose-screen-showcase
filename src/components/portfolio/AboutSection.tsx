@@ -37,7 +37,7 @@ const AboutSection = () => {
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">My Journey</h3>
             <p className="text-gray-600 mb-6">
-              Started my Android development journey in 2016, I've had the privilege of working 
+              Started my Android development journey in 2018, I've had the privilege of working 
               with startups and Fortune 500 companies, building applications that have impacted 
               millions of users worldwide.
             </p>
