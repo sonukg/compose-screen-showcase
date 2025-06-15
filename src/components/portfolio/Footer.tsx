@@ -27,11 +27,6 @@ const Footer = () => {
                   Home
                 </Link>
               </li>
-              <li>
-                <Link to="/blog" className="text-gray-400 hover:text-white transition-colors">
-                  AI Description Tailor
-                </Link>
-              </li>
             </ul>
           </div>
 
