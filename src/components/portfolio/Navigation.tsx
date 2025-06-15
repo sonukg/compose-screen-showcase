@@ -49,12 +49,12 @@ const Navigation = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg' 
+        ? 'bg-background/95 dark:bg-primary/95 backdrop-blur-sm shadow-lg' 
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-2xl font-bold text-gray-900 dark:text-white">
+          <Link to="/" className="text-2xl font-bold text-foreground">
             Sonu Kumar
           </Link>
           <div className="hidden md:flex space-x-8 items-center">
@@ -62,44 +62,44 @@ const Navigation = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="text-foreground hover:text-accent transition-colors"
               >
                 {item}
               </button>
             ))}
             <Link
               to="/resume"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="text-foreground hover:text-accent transition-colors"
             >
               Resume
             </Link>
             <Link
               to="/blog"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="text-foreground hover:text-accent transition-colors"
             >
               Blog
             </Link>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="text-foreground hover:text-accent transition-colors"
             >
               Contact
             </button>
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
               aria-label="Toggle theme"
             >
               {theme === 'light' ? (
-                <Moon className="h-5 w-5 text-gray-700 dark:text-gray-300" />
+                <Moon className="h-5 w-5 text-muted-foreground" />
               ) : (
-                <Sun className="h-5 w-5 text-gray-700 dark:text-gray-300" />
+                <Sun className="h-5 w-5 text-muted-foreground" />
               )}
             </button>
           </div>
           <Button 
             onClick={handleContactClick}
-            className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800"
+            className="bg-accent hover:bg-accent/90 text-accent-foreground"
           >
             Hire Me
           </Button>
