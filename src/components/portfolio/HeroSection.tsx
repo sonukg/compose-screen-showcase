@@ -11,7 +11,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-vibrant-yellow via-vibrant-orange to-vibrant-deepOrange px-4 dark:from-primary dark:to-accent">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-vibrant-yellow via-vibrant-orange to-vibrant-red px-4 dark:from-primary dark:to-accent">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div 
           className="mb-8"

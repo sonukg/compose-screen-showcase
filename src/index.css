@@ -4,91 +4,91 @@
 
 @layer base {
   :root {
-    /* Light mode - using the vibrant palette */
-    --background: 60 100% 97%;
-    --foreground: 0 0% 20%;
+    /* Light mode - using the new color palette */
+    --background: 45 100% 97%;
+    --foreground: 345 75% 25%;
 
-    --card: 60 100% 99%;
-    --card-foreground: 0 0% 20%;
+    --card: 45 100% 99%;
+    --card-foreground: 345 75% 25%;
 
-    --popover: 60 100% 99%;
-    --popover-foreground: 0 0% 20%;
+    --popover: 45 100% 99%;
+    --popover-foreground: 345 75% 25%;
 
-    --primary: 43 100% 67%; /* FCB454 - vibrant orange */
-    --primary-foreground: 0 0% 15%;
+    --primary: 20 100% 48%; /* #E85C0D - vibrant orange */
+    --primary-foreground: 45 100% 99%;
 
-    --secondary: 60 100% 76%; /* FFF085 - vibrant yellow */
-    --secondary-foreground: 0 0% 20%;
+    --secondary: 45 98% 62%; /* #FABC3F - golden yellow */
+    --secondary-foreground: 345 75% 25%;
 
-    --muted: 60 100% 90%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 45 100% 90%;
+    --muted-foreground: 345 30% 45%;
 
-    --accent: 20 100% 55%; /* FF9B17 - vibrant deep orange */
-    --accent-foreground: 60 100% 99%;
+    --accent: 349 70% 48%; /* #C7253E - vibrant red */
+    --accent-foreground: 45 100% 99%;
 
-    --destructive: 0 71% 67%; /* F16767 - vibrant coral */
-    --destructive-foreground: 60 100% 99%;
+    --destructive: 345 75% 30%; /* #821131 - dark red */
+    --destructive-foreground: 45 100% 99%;
 
-    --border: 60 100% 85%;
-    --input: 60 100% 90%;
-    --ring: 43 100% 67%;
+    --border: 45 100% 85%;
+    --input: 45 100% 90%;
+    --ring: 20 100% 48%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 60 100% 99%;
-    --sidebar-foreground: 0 0% 20%;
-    --sidebar-primary: 43 100% 67%;
-    --sidebar-primary-foreground: 0 0% 15%;
-    --sidebar-accent: 60 100% 90%;
-    --sidebar-accent-foreground: 0 0% 20%;
-    --sidebar-border: 60 100% 85%;
-    --sidebar-ring: 43 100% 67%;
+    --sidebar-background: 45 100% 99%;
+    --sidebar-foreground: 345 75% 25%;
+    --sidebar-primary: 20 100% 48%;
+    --sidebar-primary-foreground: 45 100% 99%;
+    --sidebar-accent: 45 100% 90%;
+    --sidebar-accent-foreground: 345 75% 25%;
+    --sidebar-border: 45 100% 85%;
+    --sidebar-ring: 20 100% 48%;
 
-    /* Custom vibrant colors - exact hex values */
-    --vibrant-yellow: 60 100% 76%; /* #FFF085 */
-    --vibrant-orange: 43 100% 67%; /* #FCB454 */
-    --vibrant-deep-orange: 20 100% 55%; /* #FF9B17 */
-    --vibrant-coral: 0 71% 67%; /* #F16767 */
+    /* Custom vibrant colors - new palette */
+    --vibrant-yellow: 45 98% 62%; /* #FABC3F */
+    --vibrant-orange: 20 100% 48%; /* #E85C0D */
+    --vibrant-red: 349 70% 48%; /* #C7253E */
+    --vibrant-dark-red: 345 75% 30%; /* #821131 */
   }
 
   .dark {
-    /* Dark mode - darker versions of the vibrant palette */
-    --background: 0 0% 8%;
-    --foreground: 60 100% 95%;
+    /* Dark mode - darker versions of the new palette */
+    --background: 345 15% 8%;
+    --foreground: 45 90% 95%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 60 100% 95%;
+    --card: 345 15% 10%;
+    --card-foreground: 45 90% 95%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 60 100% 95%;
+    --popover: 345 15% 10%;
+    --popover-foreground: 45 90% 95%;
 
-    --primary: 43 80% 55%; /* Darker FCB454 */
-    --primary-foreground: 0 0% 10%;
+    --primary: 20 90% 40%; /* Darker #E85C0D */
+    --primary-foreground: 345 15% 8%;
 
-    --secondary: 60 80% 60%; /* Darker FFF085 */
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 45 80% 50%; /* Darker #FABC3F */
+    --secondary-foreground: 345 15% 10%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 60 10% 65%;
+    --muted: 345 10% 15%;
+    --muted-foreground: 45 20% 65%;
 
-    --accent: 20 90% 50%; /* Darker FF9B17 */
-    --accent-foreground: 0 0% 10%;
+    --accent: 349 60% 40%; /* Darker #C7253E */
+    --accent-foreground: 345 15% 8%;
 
-    --destructive: 0 60% 55%; /* Darker F16767 */
-    --destructive-foreground: 0 0% 10%;
+    --destructive: 345 70% 25%; /* Darker #821131 */
+    --destructive-foreground: 45 90% 95%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 18%;
-    --ring: 43 80% 55%;
+    --border: 345 10% 20%;
+    --input: 345 10% 18%;
+    --ring: 20 90% 40%;
 
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 60 100% 95%;
-    --sidebar-primary: 43 80% 55%;
-    --sidebar-primary-foreground: 0 0% 10%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 60 100% 95%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 43 80% 55%;
+    --sidebar-background: 345 20% 5%;
+    --sidebar-foreground: 45 90% 95%;
+    --sidebar-primary: 20 90% 40%;
+    --sidebar-primary-foreground: 345 15% 8%;
+    --sidebar-accent: 345 10% 15%;
+    --sidebar-accent-foreground: 45 90% 95%;
+    --sidebar-border: 345 10% 20%;
+    --sidebar-ring: 20 90% 40%;
   }
 }
 

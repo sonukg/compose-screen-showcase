@@ -52,12 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom vibrant palette colors
+				// Custom vibrant palette colors - new scheme
 				vibrant: {
-					yellow: '#FFF085',
-					orange: '#FCB454', 
-					deepOrange: '#FF9B17',
-					coral: '#F16767'
+					yellow: '#FABC3F',
+					orange: '#E85C0D', 
+					red: '#C7253E',
+					darkRed: '#821131'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
