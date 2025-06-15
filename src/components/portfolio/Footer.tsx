@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <motion.footer 
-      className="bg-gradient-to-br from-peach-50 to-secondary dark:from-primary dark:to-accent text-foreground py-12"
+      className="bg-gradient-to-br from-vibrant-yellow to-secondary dark:from-primary dark:to-accent text-foreground py-12"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

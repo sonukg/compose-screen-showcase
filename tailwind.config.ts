@@ -52,12 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom palette colors
-				peach: {
-					50: '#FFCDB2',
-					100: '#FFB4A2', 
-					200: '#E5989B',
-					300: '#B5828C'
+				// Custom vibrant palette colors
+				vibrant: {
+					yellow: '#FFF085',
+					orange: '#FCB454', 
+					deepOrange: '#FF9B17',
+					coral: '#F16767'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
