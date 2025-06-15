@@ -7,12 +7,12 @@ const AboutSection = () => {
   const highlights = [
     {
       icon: Code,
-      title: "8+ Years Experience",
+      title: "6+ Years Experience",
       description: "Extensive experience in Android development with modern technologies"
     },
     {
       icon: User,
-      title: "50+ Apps Published",
+      title: "12+ Apps Published",
       description: "Successfully delivered apps with millions of downloads"
     },
     {
