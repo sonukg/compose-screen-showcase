@@ -64,24 +64,24 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="experience" className="py-20 bg-muted/30 dark:bg-primary/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Work Experience</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-foreground mb-4">Work Experience</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             My professional journey in Android development and mobile technologies
           </p>
         </div>
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="border-l-4 border-l-blue-600 dark:border-l-blue-400">
+            <Card key={index} className="border-l-4 border-l-accent">
               <CardContent className="p-8">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{exp.title}</h3>
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-gray-600 dark:text-gray-400">
-                      <span className="font-semibold text-blue-600 dark:text-blue-400">{exp.company}</span>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">{exp.title}</h3>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-muted-foreground">
+                      <span className="font-semibold text-accent">{exp.company}</span>
                       <span className="hidden sm:block">•</span>
                       <span>{exp.location}</span>
                     </div>
@@ -91,14 +91,14 @@ const ExperienceSection = () => {
                   </Badge>
                 </div>
 
-                <p className="text-gray-600 dark:text-gray-300 mb-6">{exp.description}</p>
+                <p className="text-muted-foreground mb-6">{exp.description}</p>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Achievements:</h4>
+                  <h4 className="font-semibold text-foreground mb-3">Key Achievements:</h4>
                   <ul className="grid md:grid-cols-1 gap-2">
                     {exp.achievements.map((achievement, achIndex) => (
-                      <li key={achIndex} className="flex items-start text-gray-600 dark:text-gray-300">
-                        <span className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <li key={achIndex} className="flex items-start text-muted-foreground">
+                        <span className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
                         {achievement}
                       </li>
                     ))}
@@ -106,10 +106,10 @@ const ExperienceSection = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Technologies Used:</h4>
+                  <h4 className="font-semibold text-foreground mb-3">Technologies Used:</h4>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">
+                      <Badge key={techIndex} variant="secondary" className="bg-accent/20 text-accent-foreground">
                         {tech}
                       </Badge>
                     ))}

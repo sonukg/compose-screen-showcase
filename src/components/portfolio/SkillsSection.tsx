@@ -56,11 +56,11 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-50">
+    <section id="skills" className="py-20 bg-muted/30 dark:bg-primary/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Skills & Technologies</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-foreground mb-4">Skills & Technologies</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Comprehensive expertise across mobile platforms and technologies
           </p>
         </div>
@@ -69,7 +69,7 @@ const SkillsSection = () => {
           {skillCategories.map((category, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <CardTitle className="text-lg text-center text-gray-900">
+                <CardTitle className="text-lg text-center text-foreground">
                   {category.title}
                 </CardTitle>
               </CardHeader>
@@ -79,7 +79,7 @@ const SkillsSection = () => {
                     <Badge 
                       key={skillIndex}
                       variant="secondary"
-                      className="bg-blue-100 text-blue-800 hover:bg-blue-200"
+                      className="bg-accent/20 text-accent-foreground hover:bg-accent/30"
                     >
                       {skill}
                     </Badge>
