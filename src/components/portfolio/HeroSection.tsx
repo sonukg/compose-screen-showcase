@@ -15,17 +15,17 @@ const HeroSection = () => {
         <div className="mb-8">
           <img 
             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face"
-            alt="Alex Chen"
+            alt="Sonu Kumar"
             className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
           />
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-            Alex Chen
+            Sonu Kumar
           </h1>
           <h2 className="text-2xl md:text-3xl text-blue-600 mb-6">
             Senior Android Developer
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Passionate Android developer with 8+ years of experience building scalable, 
+            Passionate Android developer with 6+ years of experience building scalable, 
             user-friendly mobile applications. Specialized in Kotlin, Jetpack Compose, 
             and modern Android architecture patterns.
           </p>
@@ -54,7 +54,7 @@ const HeroSection = () => {
           <a href="https://linkedin.com" className="text-gray-600 hover:text-blue-600 transition-colors">
             <Linkedin className="w-6 h-6" />
           </a>
-          <a href="mailto:alex@example.com" className="text-gray-600 hover:text-blue-600 transition-colors">
+          <a href="mailto:sonu@example.com" className="text-gray-600 hover:text-blue-600 transition-colors">
             <Mail className="w-6 h-6" />
           </a>
         </div>
