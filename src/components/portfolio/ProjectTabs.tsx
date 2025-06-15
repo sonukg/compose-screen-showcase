@@ -43,12 +43,12 @@ const ProjectTabs = ({ projects, categories }: ProjectTabsProps) => {
 
   return (
     <Tabs defaultValue="All" className="w-full">
-      <TabsList className="grid grid-cols-9 w-full mb-8 bg-gray-100 dark:bg-gray-800">
+      <TabsList className="grid grid-cols-9 w-full mb-8 bg-muted">
         {categories.map((category) => (
           <TabsTrigger
             key={category}
             value={category}
-            className="text-sm data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+            className="text-sm data-[state=active]:bg-accent data-[state=active]:text-accent-foreground"
           >
             {category} ({getCategoryCount(category)})
           </TabsTrigger>

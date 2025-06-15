@@ -73,23 +73,23 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           className="w-full h-48 object-cover"
         />
         <div className="absolute top-4 right-4">
-          <Badge className="bg-green-600 text-white">
+          <Badge className="bg-accent text-accent-foreground">
             {project.downloads}
           </Badge>
         </div>
         <div className="absolute top-4 left-4">
-          <Badge variant="outline" className="bg-white/90">
+          <Badge variant="outline" className="bg-background/90 text-foreground">
             {project.category}
           </Badge>
         </div>
       </div>
       
       <CardHeader>
-        <CardTitle className="text-xl text-gray-900 dark:text-white">{project.title}</CardTitle>
+        <CardTitle className="text-xl text-foreground">{project.title}</CardTitle>
       </CardHeader>
       
       <CardContent className="space-y-4">
-        <p className="text-gray-600 dark:text-gray-300">{project.description}</p>
+        <p className="text-muted-foreground">{project.description}</p>
         
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech, techIndex) => (
@@ -100,11 +100,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
 
         <div className="space-y-2">
-          <h4 className="font-semibold text-gray-900 dark:text-white">Key Features:</h4>
-          <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+          <h4 className="font-semibold text-foreground">Key Features:</h4>
+          <ul className="text-sm text-muted-foreground space-y-1">
             {project.features.map((feature, featureIndex) => (
               <li key={featureIndex} className="flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span>
+                <span className="w-1.5 h-1.5 bg-accent rounded-full mr-2"></span>
                 {feature}
               </li>
             ))}
@@ -114,7 +114,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <div className="flex flex-wrap gap-2 pt-4">
           <Button 
             size="sm" 
-            className="bg-blue-600 hover:bg-blue-700"
+            className="bg-accent hover:bg-accent/90 text-accent-foreground"
             onClick={() => handleViewDetails(project)}
           >
             View Details
