@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
@@ -12,59 +13,121 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-peach-50 to-secondary px-4 dark:from-primary dark:to-accent">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="mb-8">
-          <img 
+        <motion.div 
+          className="mb-8"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.img 
             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face"
             alt="Sonu Kumar"
             className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-background shadow-lg"
+            initial={{ scale: 0, rotate: -180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
           />
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
+          <motion.h1 
+            className="text-5xl md:text-6xl font-bold text-foreground mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             Sonu Kumar
-          </h1>
-          <h2 className="text-2xl md:text-3xl text-accent-foreground mb-6">
+          </motion.h1>
+          <motion.h2 
+            className="text-2xl md:text-3xl text-accent-foreground mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
             Senior Android Developer
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
             Passionate Android developer with 6+ years of experience building scalable, 
             user-friendly mobile applications. 15+ Apps Published. Specialized in Kotlin, Jetpack Compose, 
             and modern Android architecture patterns.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button 
-            onClick={() => scrollToSection('projects')}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg"
+        <motion.div 
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+        >
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            View My Work
-          </Button>
-          <Button 
-            variant="outline"
-            onClick={() => scrollToSection('contact')}
-            className="border-accent text-accent hover:bg-accent/10 px-8 py-3 text-lg"
+            <Button 
+              onClick={() => scrollToSection('projects')}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg"
+            >
+              View My Work
+            </Button>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Get In Touch
-          </Button>
-        </div>
+            <Button 
+              variant="outline"
+              onClick={() => scrollToSection('contact')}
+              className="border-accent text-accent hover:bg-accent/10 px-8 py-3 text-lg"
+            >
+              Get In Touch
+            </Button>
+          </motion.div>
+        </motion.div>
 
-        <div className="flex justify-center space-x-6 mb-12">
-          <a href="https://github.com/sonukg" className="text-muted-foreground hover:text-accent transition-colors">
+        <motion.div 
+          className="flex justify-center space-x-6 mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        >
+          <motion.a 
+            href="https://github.com/sonukg" 
+            className="text-muted-foreground hover:text-accent transition-colors"
+            whileHover={{ scale: 1.2, rotate: 360 }}
+            transition={{ duration: 0.3 }}
+          >
             <Github className="w-6 h-6" />
-          </a>
-          <a href="https://www.linkedin.com/in/sonukumar97" className="text-muted-foreground hover:text-accent transition-colors">
+          </motion.a>
+          <motion.a 
+            href="https://www.linkedin.com/in/sonukumar97" 
+            className="text-muted-foreground hover:text-accent transition-colors"
+            whileHover={{ scale: 1.2, rotate: 360 }}
+            transition={{ duration: 0.3 }}
+          >
             <Linkedin className="w-6 h-6" />
-          </a>
-          <a href="mailto:sonukg97@gmail.com" className="text-muted-foreground hover:text-accent transition-colors">
+          </motion.a>
+          <motion.a 
+            href="mailto:sonukg97@gmail.com" 
+            className="text-muted-foreground hover:text-accent transition-colors"
+            whileHover={{ scale: 1.2, rotate: 360 }}
+            transition={{ duration: 0.3 }}
+          >
             <Mail className="w-6 h-6" />
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
 
-        <button 
+        <motion.button 
           onClick={() => scrollToSection('about')}
           className="animate-bounce text-accent hover:text-accent/80 transition-colors"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+          whileHover={{ scale: 1.1 }}
         >
           <ArrowDown className="w-8 h-8 mx-auto" />
-        </button>
+        </motion.button>
       </div>
     </section>
   );

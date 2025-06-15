@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -65,7 +66,14 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   };
 
   return (
-    <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      whileHover={{ y: -10 }}
+    >
+      <Card className="overflow-hidden hover:shadow-xl transition-shadow">
       <div className="relative">
         <img 
           src={project.image}
@@ -112,29 +120,46 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
 
         <div className="flex flex-wrap gap-2 pt-4">
-          <Button 
-            size="sm" 
-            className="bg-accent hover:bg-accent/90 text-accent-foreground"
-            onClick={() => handleViewDetails(project)}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            View Details
-          </Button>
-          <Button size="sm" variant="outline">
-            <Github className="w-4 h-4 mr-2" />
-            Code
-          </Button>
+            <Button 
+              size="sm" 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground"
+              onClick={() => handleViewDetails(project)}
+            >
+              View Details
+            </Button>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Button size="sm" variant="outline">
+              <Github className="w-4 h-4 mr-2" />
+              Code
+            </Button>
+          </motion.div>
           {getProjectLinks(project).map((link, linkIndex) => {
             const IconComponent = link.icon;
             return (
-              <Button key={linkIndex} size="sm" variant="outline">
-                <IconComponent className="w-4 h-4 mr-2" />
-                {link.label}
-              </Button>
+              <motion.div
+                key={linkIndex}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button size="sm" variant="outline">
+                  <IconComponent className="w-4 h-4 mr-2" />
+                  {link.label}
+                </Button>
+              </motion.div>
             );
           })}
         </div>
       </CardContent>
     </Card>
+    </motion.div>
   );
 };
 
